@@ -5,13 +5,14 @@ export default function Home() {
 
   return (
     <main>
-      <Typography as="h1">main </Typography>
+      <Typography as="h1" >main </Typography>
       <Typography as="h2">main </Typography>
       <Typography as="h3">main </Typography>
       <Typography as="h4">main </Typography>
       <Typography as="h5">main </Typography>
       <Typography as="h6">main </Typography>
-
+      <Typography as="h1" >hello</Typography>
+<Typography as="p">saja branch</Typography>
       <Typography as="p" variant={"default"}>
         main{" "}
       </Typography>
