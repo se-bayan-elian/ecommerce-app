@@ -24,3 +24,5 @@ export const options = [
        Information : ['Help Cnter', ' Money Refund','Shipping','Contact us'],
        ForUsers : ['Login', ' Register','Settings','My Orders'],
     } 
+
+    export const brandPath = '/assets/images/logo/logo.png'
