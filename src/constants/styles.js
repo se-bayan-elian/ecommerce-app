@@ -8,11 +8,14 @@ export const lightColors = {
   gray100: '#F7FAFC',
   baseColorBlue: '#0D6EFD',
   baseColorBlue100: '#E3F0FF',
+  baseColorBlue200: '#287dfb',
   baseColorGreen: '#00B517',
   baseColorGreen100: '#C3FFCB',
+  baseColorGreen200: '#03d01d',
   baseColorOrange: '#FF9017',
   baseColorOrange100: '#FFE5BF',
   baseColorRed: '#FA3434',
+  whiteColor : '#fff',
 } 
 
 export const fonts = {
