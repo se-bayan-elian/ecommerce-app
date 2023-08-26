@@ -1,8 +1,9 @@
-import React, { Children } from 'react'
+import React from 'react'
+import { StyledContainer } from './style'
 
 const Container = ({children}) => {
   return (
-    <div>{children}</div>
+    <StyledContainer>{children}</StyledContainer>
   )
 }
 

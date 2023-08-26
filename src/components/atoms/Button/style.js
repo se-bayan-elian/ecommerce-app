@@ -60,6 +60,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   border-radius: 6px;
   width : 100%;
+  height: 100%;
   border : 1px solid transparent;
   font-size: ${props => props.theme.fontSizes.md};
   padding : 7px 0px;
