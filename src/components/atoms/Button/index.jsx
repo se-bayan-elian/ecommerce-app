@@ -2,7 +2,9 @@ import React from 'react';
 import { StyledButton } from './style';
 
 const Button = ({ children, variant, ...props }) => {
-  // text => 
+  // variant :
+  // primary ,secondary ,warning ,success 
+  // button take width 100% , make sure to wrap it with styled wrapper
   
   return (
     <StyledButton variant={variant} {...props}>
