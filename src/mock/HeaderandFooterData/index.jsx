@@ -11,6 +11,7 @@ export const HeaderNavLinks = [
   },
   {
     icon: "/assets/images/icon/Message.png",
+    // icon: "../../public/assets/images/icon/Message.png",
     label: "Message",
     href: "/message",
   },
