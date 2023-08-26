@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../../organisms/Header'
 
 const LoginPage = () => {
   return (
-    <div>LoginPage</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
