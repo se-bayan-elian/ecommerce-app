@@ -1,17 +1,18 @@
-import { StyledSelect, StyledSelectInputContainer } from '@/components/templates/StyledComponents';
-import React from 'react';
+import React from "react";
+import { StyledSelect } from "./style";
 
-const SelectInput = ({ className, options, value, onChange }) => {
+const SelectInput = ({ options, variant = "normal", ...props }) => {
+  // options => [{value,label}]
+  // variant => if exist : header , else = 'normal' (default)
+  // take width 100% , so u must wrap it with div to control width
   return (
-    <StyledSelectInputContainer className={className}>
-      <StyledSelect value={value} onChange={onChange}>
-        {options.map((option, index) => (
-          <option key={index} value={option.value}>
-              {option.label}
-          </option>
-        ))}
-      </StyledSelect>
-    </StyledSelectInputContainer>
+    <StyledSelect variant={variant} {...props}>
+      {options.map((option, index) => (
+        <option key={index} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </StyledSelect>
   );
 };
 
