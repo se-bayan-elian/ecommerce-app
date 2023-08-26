@@ -13,5 +13,6 @@ const SelectInput = ({ options, variant = "normal", ...props }) => {
         </option>
       ))}
     </StyledSelect>
-
+  )
+}
 export default SelectInput;
