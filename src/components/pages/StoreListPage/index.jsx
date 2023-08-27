@@ -2,7 +2,7 @@ import React from "react";
 import Sections from "./Sections";
 
 const StoreListPage = () => {
-  return <div>StoreListPage
+  return <div>
        <Sections/>
   </div>;
 };

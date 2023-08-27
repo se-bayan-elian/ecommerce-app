@@ -22,6 +22,12 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style-type: none ;
   }
+  body {
+    background-color: ${props => props.theme.colors.gray100};
+  }
+  input:focus-visible{
+    outline : none;
+  }
   
   @media (max-width : ${props => props.theme.media.miniLaptop} ){
      // 1 rem = 14px for mobile and tablets

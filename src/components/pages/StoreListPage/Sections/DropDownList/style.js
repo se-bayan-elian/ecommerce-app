@@ -104,8 +104,8 @@ export const InputWrapperParent = styled(StyledFlex)`
 
 export const ApplyButton = styled.button`
   background-color: #fff;
-  width: 265px;
-  padding: 10px;
+  width: 235px;
+  padding: 10px ;
   cursor: pointer;
   border: 1px solid #e3e8ee;
   text-align: center;

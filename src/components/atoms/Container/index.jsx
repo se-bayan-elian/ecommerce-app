@@ -1,15 +1,10 @@
-import "./style.css";
+import React from 'react'
+import { StyledContainer } from './style'
 
-export const Container = ({ children, noSpaces }) => {
+const Container = ({children}) => {
   return (
-    <div
-      className={`main__container ${
-        noSpaces ? "" : "main__container--padding"
-      }`}
-    >
-      {children}
-    </div>
-  );
-};
+    <StyledContainer>{children}</StyledContainer>
+  )
+}
 
-export default Container;
+export default Container

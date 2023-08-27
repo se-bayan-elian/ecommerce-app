@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledH1, StyledH2, StyledH3, StyledH4, StyledH5, StyledH6, StyledP } from "./style";
 
-const Typography = ({ as, variant, align = "left", children , ...props }) => {
+const Typography = ({ as, variant="default", align = "left", children , ...props }) => {
   // as => h1
   // align : center , left (default) , right
   switch (as.toLowerCase()) {

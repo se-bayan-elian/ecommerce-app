@@ -5,6 +5,8 @@ import { StyledP } from "../../../../atoms/Typography/style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import Typography from "@/components/atoms/Typography";
+
 import {
   Orders,
   Rating,
@@ -19,6 +21,7 @@ import {
   DiscountedPrice,
   Description,
 } from "./style";
+// import Typography from "../../../../atoms/Typography";
 
 const ProductCardInformation = () => {
   const [likedProducts, setLikedProducts] = useState([]);
@@ -36,7 +39,10 @@ const ProductCardInformation = () => {
           <img src={product.image} alt="" />
           <div>
             <TitleWithSvg>
-              <StyledP className="title">{product.title}</StyledP>
+            <Typography as="p" variant={"default-muted"}></Typography>
+
+              <Typography as="p" variant={"default"} className="title"> {product.title}</Typography>
+              {/* <StyledP className="title">{product.title}</StyledP> */}
               <StyledIcon>
                 <FontAwesomeIcon
                   icon={likedProducts.includes(product.id) ? faCheck : faHeart}

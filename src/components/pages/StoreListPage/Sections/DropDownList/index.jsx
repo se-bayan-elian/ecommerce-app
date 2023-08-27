@@ -5,7 +5,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { RadioButton } from "../../../../atoms/RadioButton";
 import RangeInput from "../../../../atoms/RangeInput";
-import Input from "../../../../atoms/Input";
+import Input from "../../Sections/Input";
 import { CheckBox } from "../../../../atoms/CheckBox";
 import { StyledP } from "../../../../atoms/Typography/style";
 import { dropdownData } from "../../../../../mock/DropDownListData";
@@ -21,6 +21,7 @@ import {
     ApplyButton,
     InputWrapperParent,
   } from './style';
+import Typography from "../../../../atoms/Typography";
 
 
 const DropDownList = () => {
@@ -59,9 +60,12 @@ const DropDownList = () => {
               {buttonName === "Category" && (
                 <CategoryList >
                   {dropdownData[buttonName].map((category, j) => (
-                    <StyledP key={j}>{category}</StyledP>
+     <Typography as="p" variant={"default" } key={j}> {category}</Typography>
+
+                    // <StyledP key={j}>{category}</StyledP>
                   ))}
-                  <StyledP className="seeall">See all</StyledP>
+                  <Typography as="p" variant={"default"} className="seeall"> ee all</Typography>
+                  {/* <StyledP className="seeall">See all</StyledP> */}
                 </CategoryList>
               )}
               {buttonName === "Features" && (
@@ -70,12 +74,14 @@ const DropDownList = () => {
                     <CheckBoxLabel>
                     <CheckBox
                       key={j}
-                      value={feature}
+                      label={feature}
                       checked={selectedFeatures.includes(feature)}
                       onChange={() => setSelectedFeatures(feature)}
                     /></CheckBoxLabel>
                   ))}
-                  <StyledP className="seeall">See all</StyledP>
+                                    <Typography as="p" variant={"default"} className="seeall"> ee all</Typography>
+
+                  {/* <StyledP className="seeall">See all</StyledP> */}
                 </div>
               )}
 
@@ -85,12 +91,14 @@ const DropDownList = () => {
                     <CheckBoxLabel>
                     <CheckBox
                       key={j}
-                      value={brand}
+                      label={brand}
                       checked={selectedBrands.includes(brand)}
                       onChange={() => setSelectedBrands(brand)}
                     /></CheckBoxLabel>
                   ))}
-                  <StyledP className="seeall">See all</StyledP>
+                                    <Typography as="p" variant={"default"} className="seeall"> ee all</Typography>
+
+                  {/* <StyledP className="seeall">See all</StyledP> */}
                 </div>
               )}
               {buttonName === "Condition" && (
@@ -114,7 +122,7 @@ const DropDownList = () => {
                     <CheckBoxLabel>
                     <CheckBox
                       key={j}
-                      value={rating}
+                      label={rating}
                       checked={selectedRating===rating}
                       onChange={() => setSelectedRating(rating)}
                     /></CheckBoxLabel>
@@ -136,6 +144,7 @@ const DropDownList = () => {
                   <div>
                     <InputWrapperParent >
                     <InputWrapper>
+                    
                     <Input
                       value={minPrice}
                       onChange={(e) => setMinPrice(e.target.value)}
