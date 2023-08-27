@@ -12,7 +12,7 @@ export default function Home() {
       <Typography as="h5">main </Typography>
       <Typography as="h6">main </Typography>
       <Typography as="h1" >hello</Typography>
-<Typography as="p">saja  shoaib branch</Typography>
+      <Typography as="p">saja  shoaib branch</Typography>
       <Typography as="p" variant={"default"}>
         main{" "}
       </Typography>
