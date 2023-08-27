@@ -1,5 +1,8 @@
 'use client'
+import '@fortawesome/fontawesome-free/css/all.css';
 import { createGlobalStyle } from "styled-components";
+
+
 
 export const GlobalStyle = createGlobalStyle`
   *{
