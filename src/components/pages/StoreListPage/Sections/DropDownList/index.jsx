@@ -7,21 +7,20 @@ import { RadioButton } from "../../../../atoms/RadioButton";
 import RangeInput from "../../../../atoms/RangeInput";
 import Input from "../../Sections/Input";
 import { CheckBox } from "../../../../atoms/CheckBox";
-import { StyledP } from "../../../../atoms/Typography/style";
 import { dropdownData } from "../../../../../mock/DropDownListData";
-import {
-    DropDownListWrapper,
-    DropdownButton,
-    DropdownContent,
-    CategoryList,
-    CheckBoxLabel,
-    RadioButtonLabel,
-    RangeInputWrapper,
-    InputWrapper,
-    ApplyButton,
-    InputWrapperParent,
-  } from './style';
 import Typography from "../../../../atoms/Typography";
+import {
+  DropDownListWrapper,
+  DropdownButton,
+  DropdownContent,
+  CategoryList,
+  CheckBoxLabel,
+  RadioButtonLabel,
+  RangeInputWrapper,
+  InputWrapper,
+  ApplyButton,
+  InputWrapperParent,
+} from './style';
 
 
 const DropDownList = () => {
@@ -59,12 +58,10 @@ const DropDownList = () => {
             <DropdownContent>
               {buttonName === "Category" && (
                 <CategoryList >
-                  {dropdownData[buttonName].map((category, j) => (
-     <Typography as="p" variant={"default" } key={j}> {category}</Typography>
-
-                    // <StyledP key={j}>{category}</StyledP>
+                  {dropdownData[buttonName].map((category, index) => (
+                    <Typography as="p" variant="default" key={index}> {category}</Typography>
                   ))}
-                  <Typography as="p" variant={"default"} className="seeall"> ee all</Typography>
+                  {/* <Typography as="p" variant="default" className="seeall"> ee all</Typography> */}
                   {/* <StyledP className="seeall">See all</StyledP> */}
                 </CategoryList>
               )}
@@ -72,14 +69,14 @@ const DropDownList = () => {
                 <div>
                   {dropdownData[buttonName].map((feature, j) => (
                     <CheckBoxLabel>
-                    <CheckBox
-                      key={j}
-                      label={feature}
-                      checked={selectedFeatures.includes(feature)}
-                      onChange={() => setSelectedFeatures(feature)}
-                    /></CheckBoxLabel>
+                      <CheckBox
+                        key={j}
+                        label={feature}
+                        checked={selectedFeatures.includes(feature)}
+                        onChange={() => setSelectedFeatures(feature)}
+                      /></CheckBoxLabel>
                   ))}
-                                    <Typography as="p" variant={"default"} className="seeall"> ee all</Typography>
+                  {/* <Typography as="p" variant="default" className="seeall"> ee all</Typography> */}
 
                   {/* <StyledP className="seeall">See all</StyledP> */}
                 </div>
@@ -89,14 +86,14 @@ const DropDownList = () => {
                 <div>
                   {dropdownData[buttonName].map((brand, j) => (
                     <CheckBoxLabel>
-                    <CheckBox
-                      key={j}
-                      label={brand}
-                      checked={selectedBrands.includes(brand)}
-                      onChange={() => setSelectedBrands(brand)}
-                    /></CheckBoxLabel>
+                      <CheckBox
+                        key={j}
+                        label={brand}
+                        checked={selectedBrands.includes(brand)}
+                        onChange={() => setSelectedBrands(brand)}
+                      /></CheckBoxLabel>
                   ))}
-                                    <Typography as="p" variant={"default"} className="seeall"> ee all</Typography>
+                  {/* <Typography as="p" variant="default" className="seeall"> ee all</Typography> */}
 
                   {/* <StyledP className="seeall">See all</StyledP> */}
                 </div>
@@ -106,13 +103,13 @@ const DropDownList = () => {
                   {dropdownData[buttonName].map((condition, j) => (
                     <RadioButtonLabel>
                       {/* <RadioButton/> */}
-                    <RadioButton
-                      key={j}
-                      value={condition}
-                      checked={selectedCondition === condition}
-                      onChange={() => setSelectedCondition(condition)}
-                      name="condition"
-                    /></RadioButtonLabel>
+                      <RadioButton
+                        key={j}
+                        value={condition}
+                        checked={selectedCondition === condition}
+                        onChange={() => setSelectedCondition(condition)}
+                        name="condition"
+                      /></RadioButtonLabel>
                   ))}
                 </div>
               )}
@@ -120,42 +117,42 @@ const DropDownList = () => {
                 <div>
                   {dropdownData[buttonName].map((rating, j) => (
                     <CheckBoxLabel>
-                    <CheckBox
-                      key={j}
-                      label={rating}
-                      checked={selectedRating===rating}
-                      onChange={() => setSelectedRating(rating)}
-                    /></CheckBoxLabel>
+                      <CheckBox
+                        key={j}
+                        label={rating}
+                        checked={selectedRating === rating}
+                        onChange={() => setSelectedRating(rating)}
+                      /></CheckBoxLabel>
                   ))}
                 </div>
               )}
               {buttonName === "priceRange" && (
                 <div>
-                    <RangeInputWrapper>
-                  <RangeInput
-                    value={selectedPriceRange[0]}
-                    onChange={(e) =>
-                      setSelectedPriceRange([
-                        e.target.value,
-                        selectedPriceRange[1],
-                      ])
-                    }
-                  /></RangeInputWrapper>
+                  <RangeInputWrapper>
+                    <RangeInput
+                      value={selectedPriceRange[0]}
+                      onChange={(e) =>
+                        setSelectedPriceRange([
+                          e.target.value,
+                          selectedPriceRange[1],
+                        ])
+                      }
+                    /></RangeInputWrapper>
                   <div>
                     <InputWrapperParent >
-                    <InputWrapper>
-                    
-                    <Input
-                      value={minPrice}
-                      onChange={(e) => setMinPrice(e.target.value)}
-                      label="Min"
-                    /></InputWrapper>
-                    <InputWrapper>
-                    <Input
-                      value={maxPrice}
-                      onChange={(e) => setMaxPrice(e.target.value)}
-                      label="Max"
-                    /></InputWrapper></InputWrapperParent>
+                      <InputWrapper>
+
+                        <Input
+                          value={minPrice}
+                          onChange={(e) => setMinPrice(e.target.value)}
+                          label="Min"
+                        /></InputWrapper>
+                      <InputWrapper>
+                        <Input
+                          value={maxPrice}
+                          onChange={(e) => setMaxPrice(e.target.value)}
+                          label="Max"
+                        /></InputWrapper></InputWrapperParent>
                     <ApplyButton>Apply</ApplyButton>
                   </div>
                 </div>
