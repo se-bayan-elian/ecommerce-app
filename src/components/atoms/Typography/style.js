@@ -87,10 +87,10 @@ ${props => {
 
 `
 const getPFontSize = (props) => {
-  if (props.variant.includes('small')) {
+  if (props.variant&&props.variant.includes('small')) {
     return props.theme.fontSizes.sm
   }
-  else if (props.variant.includes('micro')) {
+  else if (props.variant&&props.variant.includes('micro')) {
     return props.theme.fontSizes.micro
   }
   else {
@@ -100,7 +100,7 @@ const getPFontSize = (props) => {
 export const StyledP = styled.p`
  ${props => {
     return `
-      color: ${props.variant.includes('muted') ? props.theme.colors.gray600 : props.theme.colors.gray500};
+    color: ${props.variant && props.variant.includes('muted') ? props.theme.colors.gray600 : props.theme.colors.gray500};
       font-family: ${props.theme.fonts.inter};
       font-size: ${getPFontSize(props)
       };
