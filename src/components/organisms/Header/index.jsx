@@ -1,13 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import { StyledHeader } from "./style";
 
 const Header = () => {
   return (
-    <header>
+    <StyledHeader>
       <Navbar />
       {/* the list  */}
-    </header>
+    </StyledHeader>
   );
 };
 
