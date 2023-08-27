@@ -1,3 +1,9 @@
+import { ImFacebook } from 'react-icons/im'
+import { BsTwitter } from 'react-icons/bs'
+import { TfiLinkedin } from 'react-icons/tfi'
+import { RiInstagramFill } from 'react-icons/ri'
+import { AiFillYoutube } from 'react-icons/ai'
+
 export const options = [
   { value: "All Categeory", label: "All Categeory" },
   { value: "Second Categeory", label: "Second Categeory" },
@@ -42,10 +48,19 @@ export const ShipTo = [
   { value: "../../../../public/Image/Icon/France.png", label: "ShipTo" },
 ];
 
-export const UlData = {
-  About_Partnership: ["About us", "FindStore", "Categories", "Blogs"],
-  Information: ["Help Cnter", " Money Refund", "Shipping", "Contact us"],
-  ForUsers: ["Login", " Register", "Settings", "My Orders"],
-};
+export const ICONS = [
+  { SOCIAL_ICON: <ImFacebook />, href: "https://www.facebook.com/" },
+  { SOCIAL_ICON: <BsTwitter />, href: "http://twitter.com/" },
+  { SOCIAL_ICON: <TfiLinkedin />, href: "https://www.linkedin.com/" },
+  { SOCIAL_ICON: <RiInstagramFill />, href: "https://www.instagram.com/" },
+  { SOCIAL_ICON: <AiFillYoutube />, href: "https://www.youtube.com/" },
+]
+export const FOOTER__DATA = [
+  {head:"About",Data:["About us", "FindStore", "Categories", "Blogs"]},
+  {head:"Partnership",Data:["About us", "FindStore", "Categories", "Blogs"]},
+  {head:"Information",Data:["Help Cnter", " Money Refund", "Shipping", "Contact us"]},
+  {head:"ForUsers",Data:["Login", " Register", "Settings", "My Orders"]},
+]
+
 
 export const brandPath = "/assets/images/logo/logo.png";
