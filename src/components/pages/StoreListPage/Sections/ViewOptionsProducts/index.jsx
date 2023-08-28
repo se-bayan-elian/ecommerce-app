@@ -22,8 +22,8 @@ const ViewOptionsProducts = () => {
           <option value="option1">Featured</option>
         </select>
         <div className="svg">
-          <FontAwesomeIcon icon={faBars} />
-          <FontAwesomeIcon icon={faTableCells} />
+       <FontAwesomeIcon icon={faTableCells} /> 
+       <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
     </StyledViewWay>
