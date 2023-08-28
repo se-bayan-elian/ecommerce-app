@@ -10,6 +10,7 @@ import { CheckBox } from "../../../../atoms/CheckBox";
 import { dropdownData } from "../../../../../mock/DropDownListData";
 import Rating from "react-rating-stars-component";
 
+import Typography from "../../../../atoms/Typography";
 import {
   DropDownListWrapper,
   DropdownButton,
@@ -74,12 +75,12 @@ const DropDownList = () => {
                 <div>
                   {dropdownData[buttonName].map((feature, j) => (
                     <CheckBoxLabel>
-                      <CheckBox
-                        key={j}
-                        label={feature}
-                        checked={selectedFeatures.includes(feature)}
-                        onChange={() => setSelectedFeatures(feature)}
-                      />
+                        <CheckBox
+                          key={j}
+                          label={feature}
+                          checked={selectedFeatures.includes(feature)}
+                          onChange={() => setSelectedFeatures(feature)}
+                        />
                     </CheckBoxLabel>
                   ))}
                   <Typography as="p" variant={"default"} className="seeall">

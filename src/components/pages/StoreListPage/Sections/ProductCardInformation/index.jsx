@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import ProductCardInformationMock from "../../../../../mock/ProductCardInformationMock";
-import { StyledP } from "../../../../atoms/Typography/style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
