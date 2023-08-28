@@ -13,7 +13,7 @@ const Sections = () => {
       <Container>
         <BreadCrumb />
         <StyledSec>
-          <DropDownList/>
+          <DropDownList />
           <div className="sec2">
             <ViewOptionsProducts />
             <ProductCardInformation />
