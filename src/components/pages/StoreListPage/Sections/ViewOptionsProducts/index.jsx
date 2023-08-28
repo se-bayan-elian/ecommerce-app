@@ -6,18 +6,17 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTableCells } from "@fortawesome/free-solid-svg-icons";
 import { StyledViewWay } from "./style";
 import Typography from "../../../../atoms/Typography";
-// import { StyledP } from "../../../../atoms/Typography/style";
-// import Typography from "../../../../atoms/Typography"
 
 const ViewOptionsProducts = () => {
   return (
     <StyledViewWay>
-      
-      <Typography as="p" variant={"default"}>12,911 items in Mobile accessory</Typography>
+      <Typography as="p" variant="default">
+        12,911 items in Mobile accessory
+      </Typography>
       <div className="view">
-        <Typography>
+        <Typography as="p" variant="default">
           {" "}
-          <CheckBox value="Verified only" />
+          <CheckBox label="Verified only" />
         </Typography>
         <select>
           <option value="option1">Featured</option>

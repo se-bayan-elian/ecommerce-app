@@ -6,8 +6,8 @@ export const StyledViewWay = styled(StyledFlex)`
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
-  border: 1px solid #e3e8ee;
-  background: #fff;
+  border: 1px solid ${(props) => props.theme.colors.gray300};
+  background:${(props) => props.theme.colors.whiteColor};;
   margin-top: 22px;
   p {
     color: ${(props) => props.theme.colors.dark};
@@ -15,21 +15,21 @@ export const StyledViewWay = styled(StyledFlex)`
   .view {
     display: flex;
     justify-content: space-evenly;
-    width: 30%;
+    width: 40%;
     align-items: center;
   }
   select {
-    border: 1px solid #e3e8ee;
-    background: #fff;
+    border: 1px solid ${(props) => props.theme.colors.gray300};
+    background:${(props) => props.theme.colors.whiteColor};;
     padding: 10px 15px;
     border-radius: 8px;
   }
 
   .svg {
     padding: 10px 5px;
-    border: 1px solid #e3e8ee;
-    background: #fff;
-    border-radius: 8px;
+    border: 1px solid ${(props) => props.theme.colors.gray300};
+    background: ${(props) => props.theme.colors.whiteColor};
+   border-radius: 8px;
   }
   svg {
     padding-right: 10px;
