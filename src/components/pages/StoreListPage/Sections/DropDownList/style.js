@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { StyledH3, StyledP } from "../../../../atoms/Typography/style";
 import { StyledFlex } from "../../../../../styles/common";
-// import { StyledH3, StyledP } from "../Typography/style";
-// import { StyledFlex } from "../../../styles/common";
-
 export const DropDownListWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,7 +13,7 @@ export const DropdownButton = styled(StyledH3)`
       font-size: ${props.theme.fontSizes.md};
  `;
   }}
-  border-top:1px solid  #E3E8EE;
+  border-top:1px solid ${(props) => props.theme.colors.gray300};
   padding: 10px;
   width: 100%;
   display: flex;
@@ -25,12 +22,12 @@ export const DropdownButton = styled(StyledH3)`
   cursor: pointer;
   margin-top: 25px;
   svg {
-    color: #8b96a5;
+    color: ${(props) => props.theme.colors.gray400};
   }
 `;
 
 export const DropdownContent = styled.div`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.whiteColor};
   padding: 5px;
   margin-top: 5px;
   .seeall {
@@ -81,11 +78,11 @@ export const RangeInputWrapper = styled.div`
 
 export const InputWrapper = styled.div`
   input {
-    border: 1px solid #e3e8ee;
+    border: 1px solid ${(props) => props.theme.colors.gray300};
     width: 100%;
     height: 30px;
     display: block;
-    background-color: #fff;
+    background-color: ${(props) => props.theme.colors.whiteColor};
     border-radius: 10px;
   }
   label {
@@ -103,11 +100,11 @@ export const InputWrapperParent = styled(StyledFlex)`
 `;
 
 export const ApplyButton = styled.button`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.whiteColor};
   width: 235px;
-  padding: 10px ;
+  padding: 10px;
   cursor: pointer;
-  border: 1px solid #e3e8ee;
+  border: 1px solid ${(props) => props.theme.colors.gray300};
   text-align: center;
   margin-top: 10px;
   border-radius: 10px;
@@ -118,3 +115,7 @@ export const ApplyButton = styled.button`
  `;
   }}
 `;
+export const StyledContainerRatingWithCheckbox=styled(StyledFlex)`
+align-items:center;
+
+`
