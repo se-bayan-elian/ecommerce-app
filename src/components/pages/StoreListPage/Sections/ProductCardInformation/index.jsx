@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Typography from "@/components/atoms/Typography";
+import Rating from "react-rating-stars-component";
 
 import {
   Orders,
-  Rating,
   RatingAndOrders,
   Shipping,
   StyledIcon,
@@ -21,8 +21,6 @@ import {
   DiscountedPrice,
   Description,
 } from "./style";
-// import Typography from "../../../../atoms/Typography";
-
 const ProductCardInformation = () => {
   const [likedProducts, setLikedProducts] = useState([]);
   const handleLikeClick = (productId) => {
@@ -39,10 +37,10 @@ const ProductCardInformation = () => {
           <img src={product.image} alt="" />
           <div>
             <TitleWithSvg>
-            <Typography as="p" variant={"default-muted"}></Typography>
-
-              <Typography as="p" variant={"default"} className="title"> {product.title}</Typography>
-              {/* <StyledP className="title">{product.title}</StyledP> */}
+              <Typography as="p" variant="default" className="title">
+                {" "}
+                {product.title}
+              </Typography>
               <StyledIcon>
                 <FontAwesomeIcon
                   icon={likedProducts.includes(product.id) ? faCheck : faHeart}
@@ -61,7 +59,7 @@ const ProductCardInformation = () => {
               <DiscountedPrice>${product.price.discounted}</DiscountedPrice>
             </StyledPrice>
             <RatingAndOrders>
-              <Rating>{product.rating}</Rating>
+              <Rating count={5} size={24} activeColor="#ffd700" value={4} />
               <Orders>{product.orders} orders</Orders>
               <Shipping>{product.shipping}</Shipping>
             </RatingAndOrders>
