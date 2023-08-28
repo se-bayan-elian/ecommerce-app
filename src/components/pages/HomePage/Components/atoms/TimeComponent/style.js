@@ -10,15 +10,13 @@ flex-direction :column;
 border-radius: 4px;
 background: var(--base-color-gray-800, #606060);
 margin-right:20px;
-
 h4{
     color: ${props => props.theme.colors.whiteColor}; 
-    margin:10;
+    margin-top:10px;
     font-family: 'Inter', sans-serif;
 }
 p{
-    margin:0;
-    margin-top:15;
+    margin-top:5;
     color: ${props => props.theme.colors.whiteColor};
     font-family: 'Inter', sans-serif;
 }
