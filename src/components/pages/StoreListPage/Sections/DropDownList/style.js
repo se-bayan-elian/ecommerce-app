@@ -27,7 +27,7 @@ export const DropdownButton = styled(StyledH3)`
 `;
 
 export const DropdownContent = styled.div`
-  background-color: ${(props) => props.theme.colors.whiteColor};
+  background-color: ${(props) => props.theme.colors.gray100};
   padding: 5px;
   margin-top: 5px;
   .seeall {
