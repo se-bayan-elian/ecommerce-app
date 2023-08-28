@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyledH2, StyledP } from '../../../../atoms/Typography/style'
-import { StyledSuppliersSection } from './style'
+import { StyledSuppliersSection ,TextParent } from './style'
 import Typography from '../../../../atoms/Typography'
+import SuppliersForm from '../../Components/organism/SuppliersForm/SuppliersForm'
 
 const SuppliersSection = () => {
   return (
     <StyledSuppliersSection>
-      <div>
+      <TextParent>
       <Typography as='h3' >
       An easy way to send <br />
       requests to all suppliers
@@ -15,9 +15,9 @@ const SuppliersSection = () => {
         Lorem ipsum dolor sit amet, consectetur adipisicing <br />
          elit, sed do eiusmod tempor incididunt.
         </Typography>
-          </div>
+          </TextParent>
         <div>
-
+       <div className='FormPart'><SuppliersForm/></div> 
         </div>
     </StyledSuppliersSection>
   )
