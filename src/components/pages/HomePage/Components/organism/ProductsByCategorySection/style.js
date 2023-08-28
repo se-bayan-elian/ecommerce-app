@@ -4,23 +4,47 @@ export const GridParent = styled.div`
   display: grid;
   width: 88%;
   margin: 50px 94px;
-  // background-image: ${props =>props.background ? `url(${props.background})` : 'none'};
-  background-size: cover;
   border-radius: 10px;
-  grid-template-columns: repeat(6, 1fr);
-  border: 1px solid ${props =>props.theme.colors.gray300};
+  grid-template-columns: 1fr repeat(5, 1fr);
+  border: 1px solid ${(props) => props.theme.colors.gray300};
 `;
 
 export const GridItem = styled.div`
-border: 1px solid ${props =>props.theme.colors.gray300};
-padding: 20px;
+  border: 1px solid ${(props) => props.theme.colors.gray300};
+  padding: 20px;
   text-align: center;
-  
 `;
 
-export const DoubleSizeItem = styled(GridItem)`
+export const DoubleSizeItem = styled.div`
   grid-row: span 2;
-  // flex:2;
   grid-column: span 2;
-  border: 1px solid ${props =>props.theme.colors.gray300};
+  width:100%;
+  background-repeat: no-repeat;
+  background-position:center top ;
+  background-size: cover;
+  background-image: url(assets/images/other/SupplierSectionBack.png); 
+  border: 1px solid ${(props) => props.theme.colors.gray300};
+  h2{
+    color:${(props) => props.theme.colors.primary} !important;
+    margin-left:-60px;
+  }
+  }
+  .DoubleItemContent{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    margin:20px 90px;
+    margin-right:200px;
+  }
+  button {
+    border-radius: 5px;
+    background-color: ${(props) => props.theme.colors.whiteColor};
+    color: ${(props) => props.theme.colors.dark};
+    width: 140px;
+    margin-top:20px;
+    font-weight: 500;
+    font-size: 16px;
+    height: 50px;
+    margin-right:140px;
+  }
 `;
