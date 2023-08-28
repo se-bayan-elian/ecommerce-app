@@ -7,15 +7,15 @@ export const PaginationContainer = styled.div`
   gap: 15px;
 
   select {
-    background: #fff;
-    border: 1px solid #e3e8ee;
+    background: ${(props) => props.theme.colors.whiteColor};
+    border: 1px solid ${(props) => props.theme.colors.gray300};
     padding: 5px 10px;
   }
 `;
 export const PageButton = styled.button`
   padding: 8px 16px;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.colors.gray300};
   border-radius: 4px;
   cursor: pointer;
-  background-color: ${(props) => (props.active ? "#f0f0f0" : "transparent")};
+  background-color: ${(props) => (props.active ? "#fff" : "transparent")};
 `;
