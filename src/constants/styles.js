@@ -19,6 +19,7 @@ export const lightColors = {
   whiteColor: "#fff",
 };
 
+
 export const fonts = {
   inter: "Inter",
 

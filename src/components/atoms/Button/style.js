@@ -10,9 +10,9 @@ const getStylesByVariant = ({ variant, theme }) => {
     border-color : ${theme.colors.baseColorBlue} ;
     
     &:hover{
-      box-shadow: 0 0 16px 0.2px ${theme.colors.baseColorBlue};
-      background-color: ${theme.colors.baseColorBlue200};
-      border-color : ${theme.colors.baseColorBlue200} ;
+      background-color: transparent;
+      border-color : ${theme.colors.baseColorBlue} ;
+      color : ${theme.colors.baseColorBlue} ;
     }
     
   `;
@@ -22,9 +22,9 @@ const getStylesByVariant = ({ variant, theme }) => {
       color: ${theme.colors.baseColorBlue};
       border-color : ${theme.colors.gray300};
       &:hover{
-        box-shadow: 0 0 16px 0.2px ${theme.colors.baseColorBlue};
-        background-color: ${theme.colors.gray200};
-        border-color : ${theme.colors.gray200};
+        background-color: ${theme.colors.baseColorBlue};
+        border-color : ${theme.colors.baseColorBlue} ;
+        color : ${theme.colors.whiteColor} ;
       }
 
     `;
@@ -34,21 +34,34 @@ const getStylesByVariant = ({ variant, theme }) => {
       color: ${theme.colors.baseColorRed};
       border-color : ${theme.colors.gray300};
       &:hover{
-        box-shadow: 0 0 16px 0.2px ${theme.colors.baseColorRed};
-        background-color: ${theme.colors.gray200};
-        border-color : ${theme.colors.gray200};
+        background-color: ${theme.colors.baseColorRed};
+        border-color : ${theme.colors.baseColorRed} ;
+        color : ${theme.colors.whiteColor} ;
       }
 
     `;
-  } else if (variant == "success") {
+  } 
+  else if (variant == "success") {
     return `
       background-color: ${theme.colors.baseColorGreen};
       color: ${theme.colors.whiteColor};
       border-color : ${theme.colors.baseColorGreen};
       &:hover{
-        box-shadow: 0 0 16px 0.2px ${theme.colors.baseColorGreen200};
-        background-color: ${theme.colors.baseColorGreen200};
-        border-color: ${theme.colors.baseColorGreen200};
+        background-color: transparent;
+        border-color : ${theme.colors.baseColorGreen} ;
+        color : ${theme.colors.baseColorGreen} ;
+      }
+
+    `;
+  }else if (variant == "orange") {
+    return `
+      background-color: ${theme.colors.baseColorOrange};
+      color: ${theme.colors.whiteColor};
+      border-color : ${theme.colors.baseColorOrange};
+      &:hover{
+        background-color: transparent;
+        border-color : ${theme.colors.baseColorOrange} ;
+        color : ${theme.colors.baseColorOrange} ;
       }
 
     `;
@@ -62,6 +75,7 @@ export const StyledButton = styled.button`
   border: 1px solid transparent;
   font-size: ${(props) => props.theme.fontSizes.md};
   padding: 7px 0px;
+  transition: 0.5s all;
 
   ${(props) => {
     return getStylesByVariant(props);
