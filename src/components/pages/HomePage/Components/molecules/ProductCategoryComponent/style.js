@@ -8,10 +8,20 @@ img{
     width:100px; 
     height:100px;
 }
-title{
-    color:${props => props.theme.colors.gray600}
+.title h5{
+    font-family:'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    color:${props => props.theme.colors.dark}
 }
-p{
-    color:${(props)=>props.theme.colors.grey500}
+.price p{
+    font-family:'Inter', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:${(props)=>props.theme.colors.grey500};
 }
 `
