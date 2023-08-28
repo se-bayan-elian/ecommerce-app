@@ -7,6 +7,7 @@ import AddCoupon from "../../molecules/AddCoupon";
 import CartOrderInfo from "../../molecules/CartOrderInfo";
 import ServicesFeatures from "../../organisms/ServicesFeatures";
 import SavedForLaterProducts from "../../organisms/SavedForLaterProducts";
+import DiscountBanner from "../../molecules/DiscountBanner";
 const CartPage = () => {
   const cartElementNumber = 5;
   return (
@@ -26,6 +27,7 @@ const CartPage = () => {
           </div>
         </div>
         <SavedForLaterProducts />
+        <DiscountBanner/>
       </Container>
     </StyledCartPage>
   );
