@@ -9,8 +9,6 @@ import Input from "../../Sections/Input";
 import { CheckBox } from "../../../../atoms/CheckBox";
 import { dropdownData } from "../../../../../mock/DropDownListData";
 import Rating from "react-rating-stars-component";
-
-import Typography from "../../../../atoms/Typography";
 import {
   DropDownListWrapper,
   DropdownButton,
