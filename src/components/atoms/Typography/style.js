@@ -8,7 +8,7 @@ text-align: ${props => props.align};
 export const StyledH1 = styled.h1`
 ${props => {
     return `
-      color: ${props.theme.colors.dark};
+      color: ${props.theme.colors.dark||props.theme.colors.gray500};
       font-family: ${props.theme.fonts.inter};
       font-size: ${props.theme.fontSizes.xxxxl};
  `
