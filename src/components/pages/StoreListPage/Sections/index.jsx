@@ -7,9 +7,7 @@ import ProductCardInformation from "./ProductCardInformation";
 import { StyledSec } from "./style";
 import Pagnation from "./Pagnation";
 import DropDownList from "./DropDownList";
-import Footer from "../../../organisms/Footer";
-import Copyright from "../../../molecules/Copyright";
-import Subscribe from "../../../organisms/Subscribe";
+
 const Sections = () => {
   return (
     <div>
@@ -24,9 +22,6 @@ const Sections = () => {
         </StyledSec>
         <Pagnation />
       </Container>
-      <Subscribe/>
-      <Footer />
-      <Copyright/>
     </div>
   );
 };
