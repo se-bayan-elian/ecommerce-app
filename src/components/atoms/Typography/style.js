@@ -1,3 +1,4 @@
+'use client'
 import styled, { css } from "styled-components";
 
 const commonStyles = css`
@@ -7,7 +8,7 @@ const commonStyles = css`
 export const StyledH1 = styled.h1`
   ${(props) => {
     return `
-      color: ${props.theme.colors.dark};
+      color: ${props.theme.colors.dark||props.theme.colors.gray500};
       font-family: ${props.theme.fonts.inter};
       font-size: ${props.theme.fontSizes.xxxxl};
  `;
@@ -86,7 +87,7 @@ export const StyledH6 = styled.h6`
   letter-spacing: -0.00625rem;
 `;
 const getPFontSize = (props) => {
-  if (props.variant && props.variant.includes("small")) {
+  if (props.variant && props.variant?.includes("small")) {
     return props.theme.fontSizes.sm;
   } else if (props.variant && props.variant.includes("micro")) {
     return props.theme.fontSizes.micro;
@@ -97,7 +98,7 @@ const getPFontSize = (props) => {
 export const StyledP = styled.p`
   ${(props) => {
     return `
-      color: ${props.variant && props.variant.includes("muted") ? props.theme.colors.gray600 : props.theme.colors.gray500};
+      color: ${props.variant && !props.variant?.includes("muted") ? props.theme.colors.gray600 : props.theme.colors.gray500};
       font-family: ${props.theme.fonts.inter};
       font-size: ${getPFontSize(props)};
       `;
@@ -107,3 +108,4 @@ export const StyledP = styled.p`
   line-height: 1.5rem;
   letter-spacing: -0.0125rem;
 `;
+
