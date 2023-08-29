@@ -4,6 +4,7 @@ const Style = styled.div`
         .stack{
             display:flex;
             justify-content: space-between;
+            padding: 10px 0;
         }
         
         .footer__image{
