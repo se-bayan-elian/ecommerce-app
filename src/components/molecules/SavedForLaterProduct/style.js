@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 export const StyledSavedForLaterProduct = styled.div`
   .image-wrapper{
     height : 240px;
-    background-color : ${props => props.theme.colors.gray300};
+    background-color : ${props => props.theme.colors.gray200};
     display: flex;
     justify-content : center;
     align-items: center;

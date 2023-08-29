@@ -101,7 +101,7 @@ const getPFontSize = (props) => {
 export const StyledP = styled.p`
  ${props => {
     return `
-    color: ${props?.variant?.includes('muted') ? props.theme.colors.gray600 : props.theme.colors.gray500};
+      color: ${!props.variant?.includes('muted') ? props.theme.colors.gray600 : props.theme.colors.gray500};
       font-family: ${props.theme.fonts.inter};
       font-size: ${getPFontSize(props)
       };
