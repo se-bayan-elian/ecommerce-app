@@ -1,5 +1,8 @@
 'use client'
+import '@fortawesome/fontawesome-free/css/all.css';
 import { createGlobalStyle } from "styled-components";
+
+
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -18,6 +21,12 @@ export const GlobalStyle = createGlobalStyle`
   }
   ul {
     list-style-type: none ;
+  }
+  body {
+    background-color: ${props => props.theme.colors.gray100};
+  }
+  input:focus-visible{
+    outline : none;
   }
   
   @media (max-width : ${props => props.theme.media.miniLaptop} ){
