@@ -7,4 +7,4 @@ const SignUp = () => {
   )
 }
 
-export default Login
+export default SignUp

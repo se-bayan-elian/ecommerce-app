@@ -6,7 +6,7 @@ export const StyledSavedForLaterProducts = styled.div`
   padding : 20px;
   border-radius : 6px;
   border: 1px solid ${props => props.theme.colors.gray200};
-
+  margin-bottom : 20px;
   .title {
     margin-bottom: 22px ;
   }
