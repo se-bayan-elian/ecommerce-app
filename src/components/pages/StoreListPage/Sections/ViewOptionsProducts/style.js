@@ -29,10 +29,11 @@ export const StyledViewWay = styled(StyledFlex)`
     padding: 10px 5px;
     border: 1px solid ${(props) => props.theme.colors.gray300};
     background: ${(props) => props.theme.colors.whiteColor};
-   border-radius: 8px;
+    border-radius: 8px;
   }
   svg {
-    padding-right: 10px;
+    padding:0px  5px ;
     color: ${(props) => props.theme.colors.gray500};
+    font-size: ${(props)=>props.theme.fontSizes.lg};
   }
 `;

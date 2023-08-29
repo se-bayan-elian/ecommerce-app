@@ -3,9 +3,9 @@ import React from "react";
 import { CheckBox } from "../../../../atoms/CheckBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faTableCells } from "@fortawesome/free-solid-svg-icons";
 import { StyledViewWay } from "./style";
 import Typography from "../../../../atoms/Typography";
+import { faBorderAll } from "@fortawesome/free-solid-svg-icons";
 
 const ViewOptionsProducts = () => {
   return (
@@ -22,8 +22,14 @@ const ViewOptionsProducts = () => {
           <option value="option1">Featured</option>
         </select>
         <div className="svg">
-       <FontAwesomeIcon icon={faTableCells} /> 
-       <FontAwesomeIcon icon={faBars} />
+          <button>
+            {" "}
+            <FontAwesomeIcon icon={faBorderAll} />
+          </button>
+          <button>
+            {" "}
+            <FontAwesomeIcon icon={faBars} />
+          </button>
         </div>
       </div>
     </StyledViewWay>
