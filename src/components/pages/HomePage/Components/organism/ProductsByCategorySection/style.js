@@ -13,21 +13,20 @@ export const GridItem = styled.div`
   border: 1px solid ${(props) => props.theme.colors.gray300};
   padding: 20px;
   text-align: center;
+  width:100%;
+  border: 0px 1px 0px 1px;
 `;
-
 export const DoubleSizeItem = styled.div`
   grid-row: span 2;
   grid-column: span 2;
-  width:100%;
   background-repeat: no-repeat;
   background-position:center top ;
   background-size: cover;
   background-image: url(assets/images/other/SupplierSectionBack.png); 
   border: 1px solid ${(props) => props.theme.colors.gray300};
   h2{
-    color:${(props) => props.theme.colors.primary} !important;
+    color:${(props) => props.theme.colors.darl} !important;
     margin-left:-60px;
-  }
   }
   .DoubleItemContent{
     display:flex;
@@ -47,4 +46,4 @@ export const DoubleSizeItem = styled.div`
     height: 50px;
     margin-right:140px;
   }
-`;
+`
