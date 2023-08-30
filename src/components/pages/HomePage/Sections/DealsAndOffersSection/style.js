@@ -1,18 +1,16 @@
 import styled from 'styled-components';
-
 export const DealesandOfferTable = styled.div`
 display:grid;
-width:88%;
+width:87%;
 margin:50px 94px;
 border-radius:10px;
 grid-template-columns:2fr repeat(5,1fr);
-border:1px solid #E3E8EE;
-// border-collapse: collapse;
 .item{
   flex:1;
-  padding:25px;
+  padding:23px;
   text-align:center;
-  border:1px solid #E3E8EE;
+  border:1px solid ${(props) => props.theme.colors.gray300};
+  border-radius: 2px;
 }
 .item-double{
   flex:2;
@@ -41,7 +39,7 @@ img{
 p{
   font-family: 'Inter', sans-serif;
   font-size: 17px;
-  color: #1C1C1C;
+  color: ${(props) => props.theme.colors.dark};
   margin-top:10px;
   margin-bottom:10px;
 }
