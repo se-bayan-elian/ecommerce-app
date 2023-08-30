@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import TechComponent from '../../Components/atoms/TechComponent/TechComponent'
 import smartWatch from '../../../../../../public/assets/images/tech/03.png'
@@ -16,9 +14,7 @@ const DealsAndOffersSection = () => {
     <div className='item item-double'>
       <div className="deal">
       <h2>Deals and offers</h2>
-      {/* <Typography as='h4' variant=''>Deals and offers</Typography> */}
       <Typography as='p' variant=''>Hygiene equipment</Typography>
-      {/* <p>Hygiene equipment</p> */}
       </div>
       <div>
         <GroupTimeComponent/>
