@@ -30,7 +30,7 @@ import {
 } from "./style";
 import Typography from "../../../../atoms/Typography";
 
-import { pics, title_detail } from "../../../../../mock/info";
+import { details, pics, title_detail, trade_prices } from "../../../../../mock/info";
 
 const ContentMain = () => {
   return (
@@ -73,61 +73,28 @@ const ContentMain = () => {
             </div>
           </StyledRatingContainer>
           <StyledPricing>
-            <StyledPrice className="first">
-              <Typography as="p" className="selected">
-                $98.00
-              </Typography>
-              <span>50-100 pcs</span>
-            </StyledPrice>
-            <StyledPrice>
-              <Typography as="p">$90.00</Typography>
-              <span>100-700 pcs</span>
-            </StyledPrice>
-            <StyledPrice>
-              <Typography as="p">$78.00</Typography>
-              <span>700+ pcs</span>
-            </StyledPrice>
+            {trade_prices.map((price) => (
+              <StyledPrice key={price.id} className={price.is_first ? "first" : ""}>
+                <Typography as="p" className={price.selected ? "selected" : ""}>
+                  ${price.price}.00
+                </Typography>
+                <span>{price.quantity} pcs</span>
+              </StyledPrice>
+            ))}
           </StyledPricing>
-          <StyledDetails>
-            <DetailsContainer>
-              <StyledRow>
-                <StyledTitle>Price</StyledTitle>
-                <StyledDetail>Negotiable</StyledDetail>
-              </StyledRow>
-            </DetailsContainer>
-          </StyledDetails>
-          <StyledDetails>
-            <DetailsContainer>
-              <StyledRow>
-                <StyledTitle>Type:</StyledTitle>
-                <StyledDetail>Classic shoes</StyledDetail>
-              </StyledRow>
-              <StyledRow>
-                <StyledTitle>Material:</StyledTitle>
-                <StyledDetail>Plastic material</StyledDetail>
-              </StyledRow>
-              <StyledRow>
-                <StyledTitle>Design:</StyledTitle>
-                <StyledDetail>Modern nice</StyledDetail>
-              </StyledRow>
-            </DetailsContainer>
-          </StyledDetails>
-          <StyledDetails>
-            <DetailsContainer>
-              <StyledRow>
-                <StyledTitle>Customization:</StyledTitle>
-                <StyledDetail>Customized logo and design custom packages</StyledDetail>
-              </StyledRow>
-              <StyledRow>
-                <StyledTitle>Protection:</StyledTitle>
-                <StyledDetail>Refund Policy</StyledDetail>
-              </StyledRow>
-              <StyledRow>
-                <StyledTitle>Warranty:</StyledTitle>
-                <StyledDetail>2 years full warranty</StyledDetail>
-              </StyledRow>
-            </DetailsContainer>
-          </StyledDetails>
+
+          {details.map((detail) => (
+            <StyledDetails key={detail.id}>
+              <DetailsContainer>
+                {detail.content.map((row) => (
+                  <StyledRow key={row.id}>
+                    <StyledTitle>{row.title}:</StyledTitle>
+                    <StyledDetail>{row.detail}</StyledDetail>
+                  </StyledRow>
+                ))}
+              </DetailsContainer>
+            </StyledDetails>
+          ))}
         </MainDetails>
         <div>
           <CompanyDetails>
