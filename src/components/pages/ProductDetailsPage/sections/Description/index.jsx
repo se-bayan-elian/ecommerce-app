@@ -21,7 +21,7 @@ import {
 import Layout from "../Layout";
 import Typography from "../../../../atoms/Typography";
 import Image from "next/image";
-import { detailsTable, features } from "../../../../../mock/info";
+import { detailsTable, features, you_may_like_items } from "../../../../../mock/info";
 
 const Description = () => {
   return (
@@ -64,34 +64,15 @@ const Description = () => {
         <YouMayLike>
           <Typography as="h5">You may like</Typography>
           <ItemsContainer>
-            <Item>
-              <Image src="/assets/images/cloth/01.png" width={100} height={100} />
-              <div>
-                <Typography as="p">Apple Watch Series Space Gray</Typography>
-                <span>$7.00 - $99.50</span>
-              </div>
-            </Item>
-            <Item>
-              <Image src="/assets/images/cloth/01.png" width={100} height={100} />
-              <div>
-                <Typography as="p">Apple Watch Series Space Gray</Typography>
-                <span>$7.00 - $99.50</span>
-              </div>
-            </Item>
-            <Item>
-              <Image src="/assets/images/cloth/01.png" width={100} height={100} />
-              <div>
-                <Typography as="p">Apple Watch Series Space Gray</Typography>
-                <span>$7.00 - $99.50</span>
-              </div>
-            </Item>
-            <Item>
-              <Image src="/assets/images/cloth/01.png" width={100} height={100} />
-              <div>
-                <Typography as="p">Apple Watch Series Space Gray</Typography>
-                <span>$7.00 - $99.50</span>
-              </div>
-            </Item>
+            {you_may_like_items.map((item) => (
+              <Item key={item.id}>
+                <Image src={item.image_src} width={100} height={100} />
+                <div>
+                  <Typography as="p">{item.title}</Typography>
+                  <span>{item.price}</span>
+                </div>
+              </Item>
+            ))}
           </ItemsContainer>
         </YouMayLike>
       </StyledContainer>
