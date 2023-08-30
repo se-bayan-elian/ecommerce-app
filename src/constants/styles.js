@@ -10,6 +10,8 @@ export const lightColors = {
   baseColorBlue: "#0D6EFD",
   baseColorBlue100: "#E3F0FF",
   baseColorBlue200: "#287dfb",
+  baseColorBlue300: "#005ADE",
+  baseColorBlue400: "#237CFF",
   baseColorGreen: "#00B517",
   baseColorGreen100: "#C3FFCB",
   baseColorGreen200: "#03d01d",
