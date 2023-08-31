@@ -46,6 +46,9 @@ Install dependencies
   yarn 
 ```
 
+Very important note : this website is not respnsive ,, please sure your scale'width is 1920px
+آ×فث
+
 Start the server
 
 ```bash
