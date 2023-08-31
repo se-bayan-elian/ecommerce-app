@@ -1,18 +1,18 @@
 "use client";
-import Typography from "@/components/atoms/Typography";
+
+import Typography from "../components/atoms/Typography";
 
 export default function Home() {
-
   return (
     <main>
-      <Typography as="h1" >main </Typography>
+      <Typography as="h1">main </Typography>
       <Typography as="h2">main </Typography>
       <Typography as="h3">main </Typography>
       <Typography as="h4">main </Typography>
       <Typography as="h5">main </Typography>
       <Typography as="h6">main </Typography>
-      <Typography as="h1" >hello</Typography>
-      <Typography as="p">saja  shoaib branch</Typography>
+      <Typography as="h1">hello</Typography>
+      <Typography as="p">saja shoaib branch</Typography>
       <Typography as="p" variant={"default"}>
         main{" "}
       </Typography>
@@ -41,7 +41,6 @@ export default function Home() {
       <Typography as="a" variant={"micro-muted"} href="/hhh">
         main{" "}
       </Typography>
-      
     </main>
   );
 }
