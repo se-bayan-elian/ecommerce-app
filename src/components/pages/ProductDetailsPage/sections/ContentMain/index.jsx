@@ -29,6 +29,7 @@ import {
   SaveLater,
 } from "./style";
 import Typography from "../../../../atoms/Typography";
+import Button from "../../../../atoms/Button";
 
 import { details, pics, title_detail, trade_prices } from "../../../../../mock/info";
 
@@ -46,7 +47,7 @@ const ContentMain = () => {
         </PicsContainer>
         <MainDetails>
           <StyledStock>
-            <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="SVGRepo_bgCarrier" strokeWidth={0} />
               <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
               <g id="SVGRepo_iconCarrier">
@@ -100,7 +101,7 @@ const ContentMain = () => {
         <div>
           <CompanyDetails>
             <CompanyName>
-              <svg width={48} height={48} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+              <svg width={48} height={48} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width={48} height={48} rx={4} fill="#C6F3F1" />
                 <path
                   d="M16.0085 34V13.6364H23.6449C25.2093 13.6364 26.5218 13.9081 27.5824 14.4517C28.6496 14.9953 29.455 15.7576 29.9986 16.7386C30.5488 17.7131 30.8239 18.8499 30.8239 20.1491C30.8239 21.455 30.5455 22.5885 29.9886 23.5497C29.4384 24.5043 28.6264 25.2434 27.5526 25.767C26.4787 26.2841 25.1596 26.5426 23.5952 26.5426H18.1562V23.4801H23.098C24.0128 23.4801 24.7618 23.3542 25.3452 23.1023C25.9285 22.8437 26.3594 22.4692 26.6378 21.9787C26.9228 21.4815 27.0653 20.8717 27.0653 20.1491C27.0653 19.4266 26.9228 18.8101 26.6378 18.2997C26.3527 17.7827 25.9186 17.3916 25.3352 17.1264C24.7519 16.8546 23.9995 16.7188 23.0781 16.7188H19.6974V34H16.0085ZM26.5284 24.7727L31.5696 34H27.4531L22.5014 24.7727H26.5284Z"
@@ -126,12 +127,14 @@ const ContentMain = () => {
                 <TbWorld className="icon" />
                 <p>Worldwide shipping</p>
               </div>
-              <button>Send inquiry</button>
-              <button>Seller's profile</button>
+              <Button variant="primary" className="primary__button">
+                Send inquiry
+              </Button>
+              <Button variant="secondary">Seller's profile</Button>
             </CompanyLocation>
           </CompanyDetails>
           <SaveLater>
-            <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+            <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
