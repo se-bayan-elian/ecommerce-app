@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: ${props => props.theme.colors.gray100};
+    font-family: 'Inter', sans-serif;
   }
   input:focus-visible{
     outline : none;

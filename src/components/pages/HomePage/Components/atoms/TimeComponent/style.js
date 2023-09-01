@@ -1,3 +1,4 @@
+'use client'
 import { styled } from "styled-components";
 
 export const StyledTimeComponent = styled.div`
@@ -9,15 +10,10 @@ justify-content:center;
 flex-direction :column;
 border-radius: 4px;
 background: var(--base-color-gray-800, #606060);
-margin-right:20px;
-h4{
+.title{
     color: ${props => props.theme.colors.whiteColor}; 
-    margin-top:10px;
-    font-family: 'Inter', sans-serif;
 }
-p{
-    margin-top:5;
+.number{
     color: ${props => props.theme.colors.whiteColor};
-    font-family: 'Inter', sans-serif;
 }
 `
