@@ -1,22 +1,22 @@
 import React from "react";
-import Typography from "../Typography";
 import { StyledCheckBox } from "./style";
 
-const CheckBox = ({ label }) => {
+export const CheckBox = ({ value, checked, onChange, label }) => {
   const handleChange = (e) => {
-    console.log(e.target.checked)
-    // here u will use the label to dispatch redux event to filter products
+    if (onChange) {
+      onChange(e.target.checked);
+    }
   };
+
   return (
-      <StyledCheckBox>
-        <input
-          type="checkbox"
-          name={label}
-          onChange={handleChange}
-        />
-          {label}
-      </StyledCheckBox>
+    <StyledCheckBox>
+      <input
+        type="checkbox"
+        value={value}
+        checked={checked}
+        onChange={handleChange}
+      />
+      {label}
+    </StyledCheckBox>
   );
 };
-
-export default CheckBox;

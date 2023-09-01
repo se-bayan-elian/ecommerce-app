@@ -1,49 +1,50 @@
+'use client'
+
 import { styled } from "styled-components";
 
-export const GridParent = styled.div`
-  display: grid;
-  width: 88%;
-  margin: 50px 94px;
+export const StyledProductsByCategorySection = styled.div`
+  display: flex;
   border-radius: 10px;
-  grid-template-columns: 1fr repeat(5, 1fr);
   border: 1px solid ${(props) => props.theme.colors.gray300};
+  background-color : ${props => props.theme.colors.whiteColor};
+  margin-bottom: 15px;
+  .products{
+    width : calc(100% - 281px);
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
-export const GridItem = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.gray300};
-  padding: 20px;
-  text-align: center;
-  width:100%;
-  border: 0px 1px 0px 1px;
-`;
 export const DoubleSizeItem = styled.div`
-  grid-row: span 2;
-  grid-column: span 2;
+  width : 281px;
+  padding : 20px 11px;
   background-repeat: no-repeat;
   background-position:center top ;
   background-size: cover;
   background-image: url(assets/images/other/SupplierSectionBack.png); 
-  border: 1px solid ${(props) => props.theme.colors.gray300};
-  h2{
-    color:${(props) => props.theme.colors.darl} !important;
-    margin-left:-60px;
+  .doubleItem-title{
+    margin-bottom: 18px;
   }
   .DoubleItemContent{
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-    margin:20px 90px;
-    margin-right:200px;
+    width : 50%;
+    margin-bottom:20px;
+
   }
-  button {
+  a {
+    display: inline-block;
     border-radius: 5px;
-    background-color: ${(props) => props.theme.colors.whiteColor};
+    background-color: ${props => props.theme.colors.whiteColor};
     color: ${(props) => props.theme.colors.dark};
     width: 140px;
-    margin-top:20px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: ${props => props.theme.fontSizes.md};
     height: 50px;
-    margin-right:140px;
+    text-align : center;
+    line-height: 50px;
+
+    &:hover{
+      background-color: ${props => props.theme.colors.gray100};
   }
+    }
+
 `

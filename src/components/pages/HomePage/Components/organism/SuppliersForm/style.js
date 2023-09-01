@@ -1,3 +1,5 @@
+'use client'
+
 import { styled } from "styled-components";
 export const StyledSuppliersForm = styled.div`
   display: flex;
@@ -19,94 +21,46 @@ export const StyledSuppliersForm = styled.div`
     line-height: 1.6;
   }
   
-  .firstInput {
-    width: 400px;
-    height: 80px;
+  input,textarea {
+    width: 100%;
+    padding : 11px 10px;
     border-radius: 5px;
-    border: 1px solid  ${props => props.theme.colors.gray300};
     margin-bottom: 19px;
+
+    border: 1px solid  ${props => props.theme.colors.gray300};
     display: flex;
     align-items: center;
     justify-content: center;
-    input {
-      width: 350px;
-      height: 40px;
-      background: none;
+    &:focus{
+      outline : 0;
+      border: 1px solid ${props => props.theme.colors.baseColorBlue};
     }
-    input::placeholder {
+    &::placeholder {
       color: ${props => props.theme.colors.gray500};
       font-family: 'Inter', sans-serif;
-      font-size: 16px;
+      font-size: ${props => props.theme.fontSizes.md};
       font-style: normal;
       line-height: normal;    
   }
   }
-  .textArea {
-    width: 400px;
-    height: 100px;
-    border-radius: 5px;
-    border: 1px solid ${props => props.theme.colors.dark};
-    display: flex;
-    border: 1px solid ${props => props.theme.colors.gray300};
-    margin-bottom: 15px;
-    align-items: center;
-    justify-content: center;
-    textarea {
-      margin-top: 15px;
-      width: 350px;
-      height: 50px;
-      background: none;
-    }
-    textarea::placeholder {
-      color: ${props => props.theme.colors.gray500}; 
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      line-height: normal;
-    }
-    }
-    .secondInput{
-      input::placeholder {
-        color: ${props => props.theme.colors.gray500}; 
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        line-height: normal;   
-    }
-    }  
+  textarea{
+    height : 100px;
+  }
+
+ 
 `;
 export const ButtonStyled = styled.div `
-  button{
-    border-radius: 5px;
-    background-color: ${props => props.theme.colors.baseColorBlue};
-    color: ${props => props.theme.colors.whiteColor };
     width: 120px;
-    font-weight: 500;
-    font-size: 16px;
-    margin-top:-5px;
-    height: 50px;
-  }
+    height: 40px;
+  
 `
 
 export const SelectAndInputParent = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  .secondInput {
-    margin-bottom: 15px;
-    height: 40px;
-    height: 40px;
-    border: 1px solid ${props => props.theme.colors.gray300};
-    display: flex;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 30px;
+  gap : 8px;
     input {
       width: 150px;
-      height: 30px;
-      margin-left: 10px;
-      background: none;
     }
-  }
+  
 `;
