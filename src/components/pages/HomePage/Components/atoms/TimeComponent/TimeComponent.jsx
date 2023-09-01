@@ -5,10 +5,8 @@ import Typography from '../../../../../atoms/Typography'
 const TimeComponent = ({number,time}) => {
   return (
     <StyledTimeComponent>
-     {/* <Typography as='h4' variant=''>{number}</Typography> */}
-        <h4>{number}</h4>
-        {/* <Typography as='p' variant=''>{time}</Typography> */}
-        <p>{time}</p>
+     <Typography as='h5' variant='' className="title" >{number}</Typography>
+        <Typography as='p' variant='' className="number">{time}</Typography>
     </StyledTimeComponent>
   )
 }
