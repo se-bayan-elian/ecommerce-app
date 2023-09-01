@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import DealsAndOffersSection from "./Sections/DealsAndOffersSection/DealsAndOffersSection";
 import SuppliersSection from "./Sections/SuppliersSection/SuppliersSection";
