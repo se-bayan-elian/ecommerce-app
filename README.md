@@ -10,14 +10,6 @@ The contributers in this project is
 - [@AdlaMostafa](https://github.com/AdlaMostafa)
 - [@ahmedkilany01](https://github.com/ahmedkilany01)
 
-## Installation
-
-Install it with **Yarn**
-
-```bash
-  yarn "to install depandencies"
-  yarn dev "to run it locally"
-```
     
 ## Tech Stack
 
