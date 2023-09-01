@@ -7,8 +7,8 @@ const ProductCategoryComponent = ({title,price,src}) => {
   return (
     <StyledProductCategoryComponent>
         <div>
-           <div className='title'><h5>{title}</h5></div> 
-            <div className='price'><p>From <br />{price}</p></div> 
+           <Typography as="h6" className="product-title">{title}</Typography>
+           <Typography as="p" variant="micro-muted" className="product-price">From <span>{price}</span></Typography>
         </div>
         <div>
             <Image src={src}

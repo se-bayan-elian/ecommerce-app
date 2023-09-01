@@ -18,6 +18,7 @@ export const lightColors = {
   baseColorOrange: "#FF9017",
   baseColorOrange100: "#FFE5BF",
   baseColorRed: "#FA3434",
+  baseColorRed100: "#FFE3E3",
   whiteColor: "#fff",
 };
 
