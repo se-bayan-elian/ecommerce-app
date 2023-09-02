@@ -5,7 +5,7 @@ export const dropdownData = {
     "Metallic",
     "Plastic cover",
     "8GB Ram",
-    "Super power",
+    "Super Power",
     "Large Memory",
   ],
   priceRange: ["1", "2", "3"],

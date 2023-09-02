@@ -1,12 +1,12 @@
 import { styled } from "styled-components";
-import { StyledFlex } from "../../../../../styles/common";
+import { StyledGrid } from "../../../../../styles/common";
 import {
   StyledH3,
   StyledH5,
   StyledP,
 } from "../../../../atoms/Typography/style";
 
-export const StyledProductCard = styled(StyledFlex)`
+export const StyledProductCard = styled(StyledGrid)`
   align-items: center;
   background-color: ${(props) => props.theme.colors.whiteColor};
   border-radius: 10px;
@@ -19,23 +19,15 @@ export const StyledProductCard = styled(StyledFlex)`
     max-width: 20%;
   }
 `;
-export const StyledIcon = styled.div`
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 6px;
-  border: 1px solid ${(props) => props.theme.colors.gray300};
-  background: ${(props) => props.theme.colors.whiteColor};
-  box-shadow: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
-`;
 
-export const TitleWithSvg = styled(StyledFlex)`
+export const TitleWithSvg = styled(StyledGrid)`
   align-items: center;
   justify-content: space-between;
   margin-right: 20px;
 `;
 
 export const StyledPrice = styled.div`
-  display: flex;
+  display: grid;
   align-items: center;
   margin: 10px 0;
 `;
@@ -49,7 +41,7 @@ export const DiscountedPrice = styled(StyledH3)`
   text-decoration: line-through;
 `;
 
-export const RatingAndOrders = styled(StyledFlex)`
+export const RatingAndOrders = styled(StyledGrid)`
   align-items: center;
 `;
 
