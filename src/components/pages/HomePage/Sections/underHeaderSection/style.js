@@ -43,6 +43,16 @@ export const LandingStyle = styled(StyledFlex)`
     flex-direction: column;
     gap: 10px;
   }
+  .learn_more {
+    background: #fff;
+    color:#222;
+    border-radius:6px;
+    padding: 10px 20px;
+    &:hover {
+      background-color: ${(props) => props.theme.colors.gray100};
+    }
+    
+  }
 `;
 
 export const AdvertSection = styled.div`
