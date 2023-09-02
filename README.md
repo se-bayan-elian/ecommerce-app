@@ -9,6 +9,7 @@ The contributers in this project is
 - [@sajashoaib](https://github.com/sajashoaib)
 - [@AdlaMostafa](https://github.com/AdlaMostafa)
 - [@ahmedkilany01](https://github.com/ahmedkilany01)
+- [@izzAlfarra](https://github.com/x3AZFx)
 
     
 ## Tech Stack
