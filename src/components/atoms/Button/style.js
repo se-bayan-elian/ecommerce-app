@@ -40,8 +40,7 @@ const getStylesByVariant = ({ variant, theme }) => {
       }
 
     `;
-  } 
-  else if (variant == "success") {
+  } else if (variant == "success") {
     return `
       background-color: ${theme.colors.baseColorGreen};
       color: ${theme.colors.whiteColor};
@@ -53,7 +52,7 @@ const getStylesByVariant = ({ variant, theme }) => {
       }
 
     `;
-  }else if (variant == "orange") {
+  } else if (variant == "orange") {
     return `
       background-color: ${theme.colors.baseColorOrange};
       color: ${theme.colors.whiteColor};
