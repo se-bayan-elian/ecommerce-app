@@ -1,10 +1,9 @@
 'use client'
 import React from 'react'
 import { AdvertSection, LandingStyle } from './style'
-import Button from '../../../../atoms/userButton'
 import UserCard from '../../../../atoms/userCard' 
 import AdvertCard from '../../../../atoms/AdvertCard'
-
+import Link from "next/link";
 const LandingSection = () => {
     return (
         <div style={{ paddingBlock: '30px' }}>
@@ -23,19 +22,16 @@ const LandingSection = () => {
                     <AdvertSection>
                             <p>Latest trending</p>
                             <p>Electronic items</p>
-                            <Button
-                                btnName='Learn more'
-                                background='#FFF'
-                                padding='10px 20px' />
+                            <Link className='learn_more' href="/">Learn more</Link>
                     </AdvertSection>
                     <div className='options'>
                         <UserCard />
                         <AdvertCard
                             advert='Get US $10 off with a new supplier'
-                            background='#F38332' />
+                            background='orange' />
                         <AdvertCard
                             advert='Send quotes with supplier preferences'
-                            background='#55BDC3' />
+                            background="alfarra" />
                     </div>
                 </LandingStyle>
         </div>

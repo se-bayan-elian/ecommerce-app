@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../userButton'
+import Button from '../Button'
 import { UserCardStyle } from './style'
 import Link from 'next/link'
 
@@ -16,19 +16,17 @@ const UserCard = () => {
       <div className='btns'>
         <Link href='signup'>
           <Button
-            btnName='Join now'
-            background='var(--primary-gradient, linear-gradient(180deg, #127FFF 0%, #0067FF 100%))'
-            padding='10px 20px' 
-            color='#FFF'
-          />  
+           variant={"primary"}
+          >
+            Join now
+            </Button>  
         </Link>
         <Link href='login'>
-          <Button
-            btnName='Log in'
-            background='#FFF'
-            padding='10px 20px'
-            color='#0D6EFD'
-          />
+        <Button
+           variant={"secondary"}
+          >
+            Log in
+            </Button>  
         </Link>
 
       </div>

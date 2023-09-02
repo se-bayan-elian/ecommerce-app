@@ -1,20 +1,16 @@
 import React from 'react'
-
+import Typography from '../Typography'
+import Card from '../userAdvertCard';
 const AdvertCard = ({advert, background}) => {
     const cardStyle = {
         width: '200px',
-        height: '95px',
-        background: background,
-        borderRadius: '6px',
-        padding: '20px',
-        fontFamily: "'Inter', sans-serif",
-        fontSize: '20px',
-        fontWeight: '400',
-        color: '#FFF',
+        color:"#fff",     
     }
   return (
-      <p style={cardStyle}>{advert}</p>
-  )
+    <Card variant={background}>
+      <Typography as="p" style={cardStyle}>{advert}</Typography>
+    </Card>
+      )
 }
 
 export default AdvertCard
