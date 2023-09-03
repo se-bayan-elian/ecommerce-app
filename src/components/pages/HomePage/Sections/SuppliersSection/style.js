@@ -2,8 +2,7 @@
 import { styled } from "styled-components";
 
 export const StyledSuppliersSection = styled.div`
-  width: 88%;
-  margin: 50px 94px;
+  width: 100%;
   height: 380px;
   top: 1406px;
   background-image: url(assets/images/other/SupplierSectionBack.png); 
