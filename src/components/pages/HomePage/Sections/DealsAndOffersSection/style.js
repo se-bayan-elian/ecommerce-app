@@ -26,11 +26,17 @@ margin-bottom:25px ;
   width :calc(100% - 281px);
   display: flex;
 .item{
-  padding:10px;
+  padding:15px 10px;
   text-align:center;
   border:1px solid ${(props) => props.theme.colors.gray300};
   border-radius: 2px;
   flex:1;
+  transition: 0.2s ease-in;
+  &:hover{
+    background-color: ${props => props.theme.colors.whiteColor};
+    transform : scale(1.1) 
+  }
+  
 }
 .item-double{
   flex:2;
