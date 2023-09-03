@@ -15,7 +15,7 @@ const BreadCrumb = () => {
         <li>
           <StyledLink href="/">Men’s wear</StyledLink>
         </li>
-        <li>
+        <li className="active">
           <StyledLink href="/">Summer clothing</StyledLink>
         </li>
       </StyledBreadCrumb>
