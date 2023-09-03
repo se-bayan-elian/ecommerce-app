@@ -7,7 +7,7 @@ import RecommendedItems from './Sections/RecommendedItems'
 import Container from '../../atoms/Container'
 import ExtraServices from './Sections/ExtraServices'
 import Suppliers from './Sections/Suppliers'
-
+import Container from "../../atoms/Container";
 const HomePage = () => {
   const doubleItemContent = {
     section1: {
@@ -25,7 +25,6 @@ const HomePage = () => {
         <DealsAndOffersSection />
         <ProductsByCategorySection productData={productData.section1} doubleItemContent={doubleItemContent.section1} background='/assets/images/other/Section1.png' />
         <ProductsByCategorySection productData={productData.section2} doubleItemContent={doubleItemContent.section2} background='/assets/images/other/Section2.png' />
-
         <SuppliersSection />
       <Container>
         <RecommendedItems />
@@ -33,7 +32,8 @@ const HomePage = () => {
         <Suppliers/>
       </Container>
     </div>
-  )
-}
+          
+  );
+};
 
-export default HomePage
+export default HomePage;
