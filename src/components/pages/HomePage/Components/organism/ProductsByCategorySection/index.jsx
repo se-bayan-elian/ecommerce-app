@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { DoubleSizeItem, GridItem, GridParent } from './style';
 import ProductCategoryComponent from '../../../Components/molecules/ProductCategoryComponent/ProductCategoryComponent';

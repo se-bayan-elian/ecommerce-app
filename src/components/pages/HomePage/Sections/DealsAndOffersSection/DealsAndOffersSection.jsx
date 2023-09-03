@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import TechComponent from '../../Components/atoms/TechComponent/TechComponent'
 import smartWatch from '../../../../../../public/assets/images/tech/03.png'
