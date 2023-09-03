@@ -15,6 +15,7 @@ const Style = styled.div`
 
   .input__subscribe {
     border: unset;
+    width : 100%;
   
     :focus {
       box-shadow: unset;
