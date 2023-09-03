@@ -24,6 +24,7 @@ const DealsAndOffersSection = () => {
       productName={offer.productName}
       chipLabel={offer.chipLabel}
       key={offer.id}
+      href={offer.id}
       />
       </div>
     })}
