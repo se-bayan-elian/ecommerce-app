@@ -25,6 +25,7 @@ const ProductsByCategorySection = ({
             price={product.price}
             src={product.src}
             key={index}
+            href={product.id+''}
           />
       ))}
       </div>

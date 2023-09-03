@@ -12,6 +12,12 @@ export const StyledProductsByCategorySection = styled.div`
     width : calc(100% - 281px);
     display: flex;
     flex-wrap: wrap;
+    transition: 0.5s ease-in;
+    div{
+      &:hover{
+        border-color:  ${(props) => props.theme.colors.baseColorBlue};
+      }
+    }
   }
 `;
 
