@@ -5,6 +5,8 @@ import { useEffect } from "react";
 
 export default function Home() {
   const {token} = useAuth()
+  // it's funny to do this 🙄
+  // next middleware resolve this problem , i'll learn soon
   useEffect(()=>{
     if(token){
       redirect('/home')
@@ -15,7 +17,6 @@ export default function Home() {
   },[token])
   return (
     <main>
-      
     </main>
   );
 }
