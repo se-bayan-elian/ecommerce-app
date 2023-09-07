@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { DoubleSizeItem, GridItem, GridParent } from './style';
+import { DoubleSizeItem, GridItem, GridParent, StyledProductsByCategorySection } from './style';
 import ProductCategoryComponent from '../../../Components/molecules/ProductCategoryComponent/ProductCategoryComponent';
 import Typography from '../../../../../atoms/Typography';
 
@@ -27,7 +27,7 @@ const ProductsByCategorySection = ({
             price={product.price}
             src={product.src}
             key={index}
-            href={product.id+''}
+            href={'/store-list/1'}
           />
       ))}
       </div>
