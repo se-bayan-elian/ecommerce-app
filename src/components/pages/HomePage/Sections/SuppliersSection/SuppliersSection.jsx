@@ -1,3 +1,5 @@
+"use client";
+  
 import React from 'react'
 import { StyledSuppliersSection ,TextParent } from './style'
 import Typography from '../../../../atoms/Typography'

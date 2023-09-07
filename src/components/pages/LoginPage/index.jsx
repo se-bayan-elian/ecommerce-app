@@ -1,14 +1,17 @@
 "use client";
-import React, { useState } from 'react'
-import AuthPages from '../../layouts/AuthPages/components'
-import loginSchema from '../../../validations/loginSchema';
-import Button from './components/Button';
-import LoginForm from './LoginForm';
-import { FcGoogle } from 'react-icons/fc';
-import { AiFillFacebook } from 'react-icons/ai';
-import { Body1, H3, H4 } from './components/Typography';
+import React, { useEffect, useState } from "react";
+import AuthPages from "../../layouts/AuthPages/components";
+import loginSchema from "../../../validations/loginSchema";
+import Button from "./components/Button";
+import LoginForm from "./LoginForm";
+import { FcGoogle } from "react-icons/fc";
+import { AiFillFacebook } from "react-icons/ai";
+import { Body1, H3, H4 } from "./components/Typography";
 
-import Link from 'next/link';
+import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import useAuth from "../../../hooks/useAUth";
+import { redirect } from 'next/navigation';
 
 const LoginPage = () => {
   const [data, setData] = useState({
@@ -17,27 +20,46 @@ const LoginPage = () => {
   });
 
   const [rememberMe, setRememberMe] = useState(false);
-
+  const dispatch = useDispatch();
   const handelChange = (e) => {
-    setData(prev => ({ ...prev, [e.target.name]: { value: e.target.value, error: "" } }))
-  }
-
+    setData((prev) => ({
+      ...prev,
+      [e.target.name]: { value: e.target.value, error: "" },
+    }));
+  };
+  const { login , isLoading,token} = useAuth();
   const handelSubmit = (e) => {
     e.preventDefault();
-    loginSchema.validate({
-      username: data.username.value,
-      password: data.password.value
-    }, { abortEarly: false })
-  }
+    loginSchema.validate(
+      {
+        username: data.username.value,
+        password: data.password.value,
+      },
+      { abortEarly: false }
+    );
+    login({ username: data.username.value, password: data.password.value });
+  };
+  useEffect(()=>{
+    if(token){
+      redirect('/home')
+    }
+  },[token])
+
   return (
     <AuthPages>
       <H3 margin="0 0 17px">Sign in</H3>
-      <LoginForm {...{ rememberMe, handelChange, handelSubmit, setRememberMe }} />
+      <LoginForm
+        {...{ rememberMe, handelChange, handelSubmit, setRememberMe ,isLoading }}
+      />
       <Button
         size="medium"
         varient="secondary"
         fullWidth
-        icon={<H4 className='center'><FcGoogle /></H4>}
+        icon={
+          <H4 className="center">
+            <FcGoogle />
+          </H4>
+        }
       >
         <Body1 color="gray/800">Continue with Google</Body1>
       </Button>
@@ -47,16 +69,20 @@ const LoginPage = () => {
         background="#4267B2"
         fullWidth
         margin="10px 0 30px"
-        icon={<H4 color="white" className='center'><AiFillFacebook /></H4>}
+        icon={
+          <H4 color="white" className="center">
+            <AiFillFacebook />
+          </H4>
+        }
       >
         <Body1 color="white">Continue with Facebook</Body1>
       </Button>
 
-      <Body1 align="center" color="gray/800">Don't have an account? <Link href="/signup">Sign up</Link></Body1>
+      <Body1 align="center" color="gray/800">
+        Don't have an account? <Link href="/signup">Sign up</Link>
+      </Body1>
     </AuthPages>
-  )
-}
+  );
+};
 
-
-
-export default LoginPage
+export default LoginPage;

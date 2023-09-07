@@ -1,7 +1,9 @@
-import React from "react";
-import { DoubleSizeItem, StyledProductsByCategorySection } from "./style";
-import ProductCategoryComponent from "../../../Components/molecules/ProductCategoryComponent/ProductCategoryComponent";
-import Typography from "../../../../../atoms/Typography";
+"use client";
+import React from 'react';
+import { DoubleSizeItem, GridItem, GridParent } from './style';
+import ProductCategoryComponent from '../../../Components/molecules/ProductCategoryComponent/ProductCategoryComponent';
+import Typography from '../../../../../atoms/Typography';
+
 
 const ProductsByCategorySection = ({
   productData = [],
