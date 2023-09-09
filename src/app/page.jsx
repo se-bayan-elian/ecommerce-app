@@ -1,6 +1,6 @@
 "use client";
 import { redirect } from "next/navigation";
-import useAuth from "../hooks/useAUth";
+import useAuth from "../hooks/useAuth";
 import { useEffect } from "react";
 
 export default function Home() {
