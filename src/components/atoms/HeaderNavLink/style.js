@@ -6,10 +6,13 @@ export const StyledHeaderNavLink = styled.div`
     flex-direction: column;
     gap: 7px;
     align-items: center;
-    img{
+    .icon-wrapper{
       width: 24px;
       height: 24px;
-      object-fit: contain;
+      position: relative;
+      img{
+        object-fit: contain;
+      }
     }
     &:hover span{
       color: ${props => props.theme.colors.dark};

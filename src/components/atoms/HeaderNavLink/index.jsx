@@ -7,7 +7,10 @@ const HeaderNavLink = ({ href, label, icon }) => {
   return (
     <StyledHeaderNavLink>
       <Link href={href}>
-        <Image src={icon} alt={label} />
+        <div className="icon-wrapper">
+        <Image src={icon} alt={label} fill={true} />
+
+        </div>
         <Typography as="span" variant={"default-muted"}>
           {label}
         </Typography>

@@ -8,7 +8,7 @@ const Brand = ({ src, alt }) => {
   return (
     <Link href={PATHS.HOME}>
       <BrandWrapper>
-        <Image src={'/assets/Logo/logo.png'} fill={true} alt="brand" />
+        <Image src={'/assets/images/Logo/logo.png'} fill={true}  alt="brand" />
       </BrandWrapper>
     </Link>
   );
