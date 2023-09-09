@@ -86,4 +86,4 @@ const ProductCardInformationMock = [
   },
 ];
 
-export default ProductCardInformationMock;
+export {ProductCardInformationMock};

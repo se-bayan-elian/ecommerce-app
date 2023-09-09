@@ -9,8 +9,13 @@ export const StyledBreadCrumb = styled(StyledFlex)`
 
   li:not(:last-of-type)::after {
     content: ">";
-    margin: 0 10px;
+    margin: 0 3px;
     color: #8b96a5;
+  }
+  li.active{
+    a{
+      color: ${(props) => props.theme.colors.baseColorBlue};
+    }
   }
 `;
 export const StyledLink = styled.a`

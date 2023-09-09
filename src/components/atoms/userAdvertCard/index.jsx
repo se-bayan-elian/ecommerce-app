@@ -1,10 +1,10 @@
 import React from 'react'
 import { CardStyle } from './style'
 
-export default function Card({childern,variant}) {
+export default function Card({children,variant}) {
   return (
     <CardStyle variant={variant}>
-        {childern}
+        {children}
     </CardStyle>
   )
 }

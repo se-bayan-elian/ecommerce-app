@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import Link from 'next/link'
 import PasswordInput from '../components/PasswordInput'
 
-const LoginForm = ({ handelSubmit, handelChange, rememberMe, setRememberMe }) => {
+const LoginForm = ({ handelSubmit, handelChange, rememberMe, setRememberMe,isLoading }) => {
     return (
         <form onSubmit={handelSubmit}>
             <Input
@@ -18,7 +18,7 @@ const LoginForm = ({ handelSubmit, handelChange, rememberMe, setRememberMe }) =>
             
              <PasswordInput
                 label={"Password"}
-                name={"password1"}
+                name={"password"}
                 onChange={handelChange}
                 placeholder="Type Here"
               
@@ -34,7 +34,8 @@ const LoginForm = ({ handelSubmit, handelChange, rememberMe, setRememberMe }) =>
                 size="medium"
                 fullWidth
                 type="submit"
-            >Log In</Button>
+                isLoading={isLoading}
+            > {isLoading ? 'loading ...':'Log In'}</Button>
             <OrLine>OR</OrLine>
 
         </form>

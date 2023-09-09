@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import ProductCardInformationMock from "../../../../../mock/ProductCardInformationMock";
+import {ProductCardInformationMock} from "../../../../../mock/ProductCardInformationMock";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import Typography from "@/components/atoms/Typography";
+import Typography from "../../../../atoms/Typography";
 import Rating from "react-rating-stars-component";
 
 import {
@@ -20,6 +20,8 @@ import {
   DiscountedPrice,
   Description,
 } from "./style";
+import { useSelector } from "react-redux";
+import { viewWayCONSTANTS } from "../../../../../rtk/slices/products";
 const ProductCardInformation = () => {
   const [likedProducts, setLikedProducts] = useState([]);
   const handleLikeClick = (productId) => {
@@ -29,10 +31,12 @@ const ProductCardInformation = () => {
       setLikedProducts([...likedProducts, productId]);
     }
   };
+  const viewWay = useSelector((state) => state.products.viewWay);
+  
   return (
-    <div>
+    <div variant={viewWay}>
       {ProductCardInformationMock.map((product) => (
-        <StyledProductCard key={product.id}>
+        <StyledProductCard key={product.id} variant={viewWay}>
           <img src={product.image} alt="" />
           <div>
             <TitleWithSvg>

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import TechComponent from '../../Components/atoms/TechComponent/TechComponent'
 import { DealesandOfferTable } from './style'
@@ -24,6 +25,7 @@ const DealsAndOffersSection = () => {
       productName={offer.productName}
       chipLabel={offer.chipLabel}
       key={offer.id}
+      href={'/store-list/1'}
       />
       </div>
     })}

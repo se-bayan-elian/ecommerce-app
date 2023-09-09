@@ -14,6 +14,8 @@ const Style = styled.div`
     gap: 8px;
     height: 40px;
     margin-top: 20px;
+    width : 50%;
+    justify-content: center;
   }
 
   .subscribe__input {
@@ -22,6 +24,9 @@ const Style = styled.div`
     background-color: ${(props) => props.theme.colors.white};
     border-radius: 6px;
     overflow: hidden;
+  }
+  .button__Subscribe{
+    width: 100px;
   }
 `;
 

@@ -25,10 +25,11 @@ export const LandingStyle = styled(StyledFlex)`
     padding: 10px;
     color: #505050;
     cursor: pointer;
+    border-radius: 5px;
+    transition:  0.5s;
   }
 
   ul li:hover {
-    border-radius: 5px;
     background-color: #e5f1ff;
     font-weight: 600;
   }

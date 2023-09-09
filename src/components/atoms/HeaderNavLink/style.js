@@ -9,6 +9,10 @@ export const StyledHeaderNavLink = styled.div`
     img{
       width: 24px;
       height: 24px;
+      object-fit: contain;
+    }
+    &:hover span{
+      color: ${props => props.theme.colors.dark};
     }
   }
 `
