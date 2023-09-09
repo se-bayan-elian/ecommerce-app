@@ -10,7 +10,7 @@ import { Body1, H3, H4 } from "./components/Typography";
 
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import useAuth from "../../../hooks/useAUth";
+import useAuth from "../../../hooks/useAuth";
 import { redirect } from 'next/navigation';
 
 const LoginPage = () => {
